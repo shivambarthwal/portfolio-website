@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+#header {
+    background-color: #000000; /* Set your desired background color */
+    color: white; /* Set your desired text color */
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+#container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    max-width: 100px; /* Set your desired logo width */
+}
+
+#sidemenu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+#sidemenu li {
+    margin-right: 20px;
+}
+
+#sidemenu a {
+    text-decoration: none;
+    color: white; /* Set your desired link color */
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.fa-bars,
+.fa-times {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: white; /* Set your desired icon color */
+}
+
+@media only screen and (max-width: 768px) {
+    #sidemenu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333; /* Set your desired background color */
+        width: 100%;
+        z-index: 999;
+    }
+
+    #sidemenu.show {
+        display: flex;
+    }
+
+    #sidemenu li {
+        margin: 0;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .fa-bars {
+        display: block;
+    }
+
+    .fa-times {
+        display: block;
+    }
+}
